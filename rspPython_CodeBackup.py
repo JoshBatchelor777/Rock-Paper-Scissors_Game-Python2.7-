@@ -31,7 +31,15 @@ while True:
     pm = raw_input("What's your move? ").lower()
     if pm == moves[0] or pm == moves[1] or pm == moves[2]:
         print("You chose " + pm + ".")
-            
+
+    if pm == "Harrison Fjord!".lower():
+        print("You shoot the Computer in a furious rage!" )
+        
+        print("There are chunks of molten, burning metal and plastic everywhere")
+        print("The computer has been defeated...")
+        pPts = pPts + 999999
+        print(pl + "receives 999,999 for his victory!")
+    
     cm = random.choice(moves)
     print(cp + " chose " + cm + ".")
     
@@ -73,8 +81,9 @@ while True:
         print(cp + "won. " + cp + "has " + str(cPts) + " points.")
         
 
-    if pPts == 3 or cPts == 3:
+    if pPts >= 3 or cPts >= 3:
         break
+
 
 print("*GAME HAS ENDED*")
 if pPts > cPts:
